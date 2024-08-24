@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/browseFragment">
+    <fragment
+        android:id="@+id/browseFragment"
+        android:name="com.example.foodappui.BrowseFragment"
+        android:label="BrowseFragment" >
+        <action
+            android:id="@+id/action_browseFragment_to_browseDetailsFragment"
+            app:destination="@id/browseDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/browseDetailsFragment"
+        android:name="com.example.foodappui.BrowseDetailsFragment"
+        android:label="BrowseDetailsFragment">
+        <argument
+            android:name="food"
+            app:argType="com.example.foodappui.Food" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.navigationapp.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/mealPlansFragment"
+        android:name="com.example.navigationapp.MealPlansFragment"
+        android:label="MealPlansFragment" />
+</navigation>
